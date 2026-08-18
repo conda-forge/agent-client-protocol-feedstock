@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.12.0"
+  version: "0.12.1"
 
 package:
   name: agent-client-protocol
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/a/agent-client-protocol/agent_client_protocol-${{ version }}.tar.gz
-    sha256: 4d42ac680388556b038cb6dd58dbbbd1561f9e545a334c1a352cc055f98b1c79
+    sha256: 9963ccb590ed96d7dc542c9c023e90676fc76b1c6562e21a9ee112f4fbcb0095
 
 build:
   number: 0
