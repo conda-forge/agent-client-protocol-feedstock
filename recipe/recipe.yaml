@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.12.1"
+  version: "1.0.0"
 
 package:
   name: agent-client-protocol
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/a/agent-client-protocol/agent_client_protocol-${{ version }}.tar.gz
-    sha256: 9963ccb590ed96d7dc542c9c023e90676fc76b1c6562e21a9ee112f4fbcb0095
+    sha256: 24914d9996aaeeb08931191382d0ca1028b83743e2797cc05ded39b3bb754425
 
 build:
   number: 0
@@ -25,13 +25,16 @@ requirements:
   run:
     - python >=${{ python_min }}
     - pydantic >=2.7
+    - pydantic-core >=2.18.1
 
 tests:
   - python:
       imports:
         - acp
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: Apache-2.0
