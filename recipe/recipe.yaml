@@ -25,13 +25,16 @@ requirements:
   run:
     - python >=${{ python_min }}
     - pydantic >=2.7
+    - pydantic-core >=2.18.1
 
 tests:
   - python:
       imports:
         - acp
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: Apache-2.0
